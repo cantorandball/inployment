@@ -1,5 +1,8 @@
 app1-db:
   image: postgres
+  environment:
+    - POSTGRES_PASSWORD=replacethunpasswud
+    - POSTGRES_USER=replacethuseralsow
 app1-web:
   build: .
   command: python manage.py runserver 0.0.0.0:8000
