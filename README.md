@@ -40,13 +40,13 @@ CONNECT TO THE DJANGO SITE:
  - You can then connect to the Django site on dockermachineip:8000
 
 OPEN AN INTERACTIVE SHELL TO A RUNNING CONTAINER:
- - Get the name of the container:
+ - Get the id of the container:
     
    `docker ps`
 
  - In the Docker quickstart terminal, open a shell:
    
-   `docker run -it container_name bash`
+   `docker exec -it "container-id" bash`
 
 TO SET UP DJANGO: (You don't need to do this if there's already an 'Inployment' project in this folder - primarily here for future reference)
  - Change the postgres settings (User and password) in docker-compose.yml.
