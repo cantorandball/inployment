@@ -11,6 +11,7 @@ GET DOCKER RUNNING IN OSX:
  - Get the docker 'default' machine running. To check this:
 
     `docker-machine ls`
+
    and look for a macine called 'default' in state 'Running'
  - If it is, import its env variables to your shell:
     
@@ -20,24 +21,29 @@ START DOCKER CONTAINERS:
  - Start the containers:
     
 	`docker-compose up`
+
  - Check they're running: 
     
 	`docker ps`
+
    or, to list non-running containers too:
     
 	`docker ps -a`
+
    For this project, you're looking for containers called appname-web_1 and appname-db1
 
 CONNECT TO THE DJANGO SITE:
  - Get the ip for your Docker container:
     
     `docker-machine ip default`
+
  - You can then connect to the Django site on dockermachineip:8000
 
 OPEN AN INTERACTIVE SHELL TO A RUNNING CONTAINER:
  - Get the name of the container:
     
    `docker ps`
+
  - In the Docker quickstart terminal, open a shell:
    
    `docker run -it container_name bash`
