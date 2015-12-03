@@ -28,6 +28,12 @@ CONNECT TO THE DJANGO SITE:
     docker-machine ip default 
  - You can then connect to the Django site on dockermachineip:8000
 
+OPEN AN INTERACTIVE SHELL TO A RUNNING CONTAINER:
+ - Get the name of the container:
+    `docker ps`
+ - In the Docker quickstart terminal, open a shell:
+    `docker run -it container_name bash`
+
 TO SET UP DJANGO: (You don't need to do this if there's already an 'Inployment' project in this folder - primarily here for future reference)
  - Change the postgres settings (User and password) in docker-compose.yml.
  - In the same file, if you like, you can also change the app name from app1
