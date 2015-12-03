@@ -9,23 +9,29 @@ GET DOCKER RUNNING IN OSX:
  - Follow the install procedure at the Docker site. 
  - Start the default machine running using the 'Docker quickstart terminal' app
  - Get the docker 'default' machine running. To check this:
-    docker-machine ls
+
+    `docker-machine ls`
    and look for a macine called 'default' in state 'Running'
  - If it is, import its env variables to your shell:
-    eval "$(docker-machine env default)"
+    
+    `eval "$(docker-machine env default)"`
 
 START DOCKER CONTAINERS:
  - Start the containers:
-    docker-compose up
+    
+	`docker-compose up`
  - Check they're running: 
-    docker ps
+    
+	`docker ps`
    or, to list non-running containers too:
-    docker ps -a
+    
+	`docker ps -a`
    For this project, you're looking for containers called appname-web_1 and appname-db1
 
 CONNECT TO THE DJANGO SITE:
  - Get the ip for your Docker container:
-    docker-machine ip default 
+    
+    `docker-machine ip default`
  - You can then connect to the Django site on dockermachineip:8000
 
 OPEN AN INTERACTIVE SHELL TO A RUNNING CONTAINER:
@@ -40,7 +46,8 @@ TO SET UP DJANGO: (You don't need to do this if there's already an 'Inployment' 
  - Change the postgres settings (User and password) in docker-compose.yml.
  - In the same file, if you like, you can also change the app name from app1
  - Create the django project:
-    docker-compose run app1-web django-admin.py startproject yourprojectname .
+    
+	`docker-compose run app1-web django-admin.py startproject yourprojectname .`
  - Configure yourprojectname/settings.py to point to our db server:
 
 ```
