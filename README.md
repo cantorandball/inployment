@@ -30,9 +30,11 @@ CONNECT TO THE DJANGO SITE:
 
 OPEN AN INTERACTIVE SHELL TO A RUNNING CONTAINER:
  - Get the name of the container:
-    `docker ps`
+    
+   `docker ps`
  - In the Docker quickstart terminal, open a shell:
-    `docker run -it container_name bash`
+   
+   `docker run -it container_name bash`
 
 TO SET UP DJANGO: (You don't need to do this if there's already an 'Inployment' project in this folder - primarily here for future reference)
  - Change the postgres settings (User and password) in docker-compose.yml.
