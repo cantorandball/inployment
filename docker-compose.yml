@@ -1,9 +1,9 @@
-app1-db:
+inployment-db:
   image: postgres
   environment:
-    - POSTGRES_PASSWORD=replacethunpasswud
-    - POSTGRES_USER=replacethuseralsow
-app1-web:
+    - POSTGRES_PASSWORD=WangBankleCrimThing78GRAH
+    - POSTGRES_USER=inployer
+inployment-web:
   build: .
   command: python manage.py runserver 0.0.0.0:8000
   volumes:
@@ -11,4 +11,4 @@ app1-web:
   ports:
      - "8000:8000"
   links:
-     - app1-db
+     - inployment-db
