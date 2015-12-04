@@ -1,17 +1,25 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Inployment temp landing page</title>
-</head>
-<body>
-    <h1>INPLOYMENT</h1>
-    <h2>We put <strike>the</strike> an 'In' in 'Employment'</h2>
-    <p>Want to find out more?</p>
-    <form method="POST">
-        {% csrf_token %}
-        <input name="curious_email" id="curious-email" placeholder="Your email address"/>
-    </form>
 
+    <!-- Get bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body style="background-color: #2b669a">
+    <div id="main-form" style="padding:30px;margin:50px auto;width:300px;text-align:center;font-family: 'Open Sans', sans-serif;background-color: #ffffff">
+        <h1>INPLOYMENT</h1>
+        <h3>We put <strike>the</strike> an 'In' in 'Employment'</h3>
+        <p>Want to find out more?</p>
+        <form method="POST" class="form-group">
+            {% csrf_token %}
+            <input class="form-control" name="curious_email" id="curious-email" placeholder="Your email address"/>
+        </form>
+    </div>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 </body>
 </html>
