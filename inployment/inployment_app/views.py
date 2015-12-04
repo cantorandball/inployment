@@ -7,13 +7,13 @@ from inployment.inployment_app.models import *
 def index(request):
     # Save email
     if request.method == 'POST':
-        if request.POST['business_email']:
+        if 'business' in request.POST:
             business_email = request.POST['business_email']
             Business.objects.create(email_address=business_email)
-        if request.POST['candidate_email']:
+        elif 'candidate' in request.POST:
             candidate_email = request.POST['candidate_email']
             Candidate.objects.create(email_address=candidate_email)
-        if request.POST['interested_email']:
+        elif 'interested' in request.POST:
             interested_email = request.POST['interested_email']
             InterestedParty.objects.create(email_address=interested_email)
 

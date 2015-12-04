@@ -23,7 +23,7 @@
                     <p class="blurb">blah blah blah yeah yeah jobs blah yes.</p>
                     <form method="POST" class="form-group">
                         <input class="form-control" name="business_email" id="business-email" placeholder="Your email address"/>
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button type="submit" class="btn btn-default" name="business">Submit</button>
                         {% csrf_token %}
                     </form>
                 </div>
@@ -36,7 +36,7 @@
                     <p class="blurb">Blah blah bandidate blah</p>
                     <form method="POST" class="form-group">
                         <input class="form-control" name="candidate_email" id="candidate-email" placeholder="Your email address"/>
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button type="submit" class="btn btn-default" name="candidate">Submit</button>
                         {% csrf_token %}
                     </form>
                 </div>
@@ -49,7 +49,7 @@
                     <p class="blurb">Think you can help in another way, or interested to find out more about what we're doing? You can sign up here to be kept updated, or drop us a line.</p>
                     <form method="POST" class="form-group">
                         <input class="form-control" name="interested_email" id="interested-email" placeholder="Your email address"/>
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button type="submit" class="btn btn-default" name="interested">Submit</button>
                         {% csrf_token %}
                     </form>
                 </div>
