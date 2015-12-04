@@ -1,6 +1,15 @@
 
 body {
-    font-family: 'Open Sans',sans-serif;
+    /*font-family: 'PT Serif',serif;*/
+    font-family: 'Open Sans', sans-serif
+}
+
+h1,h2{
+    font-family: 'Oswald', sans-serif;
+}
+
+h1{
+    font-size: 6em;
 }
 
 #main-container {
