@@ -9,7 +9,8 @@
     <h2>We put <strike>the</strike> an 'In' in 'Employment'</h2>
     <p>Want to find out more?</p>
     <form method="POST">
-        <input id="curious-email" placeholder="Your email address"/>
+        {% csrf_token %}
+        <input name="curious_email" id="curious-email" placeholder="Your email address"/>
     </form>
 
 </body>
