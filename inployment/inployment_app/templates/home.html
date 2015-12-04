@@ -1,18 +1,7 @@
-{% load staticfiles %}
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Inployment temp landing page</title>
+{% block content %}
 
-    <!-- Get bootstrap css -->
-    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}" media="screen">
-    <link rel="stylesheet" type="text/css" href="{% static 'inployment_app/css/main.css' %}" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
-</head>
-<body>
     <div id="main-form">
         <h1>INPLOYMENT</h1>
         <h3>We put <strike>the</strike> an 'In' in 'Employment'</h3>
@@ -22,6 +11,5 @@
             <input class="form-control" name="curious_email" id="curious-email" placeholder="Your email address"/>
         </form>
     </div>
-    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
-</body>
-</html>
+
+{% endblock %}
