@@ -2,7 +2,14 @@ from __future__ import unicode_literals
 
 from django.db import models
 
-# Create your models here.
-class PotentialUser(models.Model):
-    email_address = models.TextField(default="")
+class Business(models.Model):
+    name = models.TextField(default="")
+    email_address = models.EmailField(default="")
+
+class Candidate(models.Model):
+    email_address = models.EmailField(default="")
+
+class InterestedParty(models.Model):
+    email_address = models.EmailField(default="")
+
 

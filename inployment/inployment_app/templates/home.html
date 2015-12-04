@@ -21,7 +21,11 @@
                     <h2 class="user-title">Business</h2>
                     <p class="user-title-post">with a paid internship to offer</p>
                     <p class="blurb">blah blah blah yeah yeah jobs blah yes.</p>
-                    <input class="form-control" name="curious_email" id="curious-email" placeholder="Your email address"/>
+                    <form method="POST" class="form-group">
+                        <input class="form-control" name="business_email" id="business-email" placeholder="Your email address"/>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                        {% csrf_token %}
+                    </form>
                 </div>
             </div>
             <div class="col-sm-4 email-box" >
@@ -30,7 +34,11 @@
                     <h2 class="user-title">Candidate</h2>
                     <p class="user-title-post">or I represent someone who is</p->
                     <p class="blurb">Blah blah bandidate blah</p>
-                    <input class="form-control" name="curious_email" id="curious-email" placeholder="Your email address"/>
+                    <form method="POST" class="form-group">
+                        <input class="form-control" name="candidate_email" id="candidate-email" placeholder="Your email address"/>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                        {% csrf_token %}
+                    </form>
                 </div>
             </div>
             <div class="col-sm-4 email-box" >
@@ -39,7 +47,11 @@
                     <h2 class="user-title">Interested</h2>
                     <p class="user-title-post">and want to know more</p>
                     <p class="blurb">Think you can help in another way, or interested to find out more about what we're doing? You can sign up here to be kept updated, or drop us a line.</p>
-                    <input class="form-control" name="curious_email" id="curious-email" placeholder="Your email address"/>
+                    <form method="POST" class="form-group">
+                        <input class="form-control" name="interested_email" id="interested-email" placeholder="Your email address"/>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                        {% csrf_token %}
+                    </form>
                 </div>
             </div>
         </div>
