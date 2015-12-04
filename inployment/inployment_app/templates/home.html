@@ -2,14 +2,53 @@
 
 {% block content %}
 
-    <div id="main-form">
-        <h1>INPLOYMENT</h1>
-        <h3>We put <strike>the</strike> an 'In' in 'Employment'</h3>
-        <p>Want to find out more?</p>
-        <form method="POST" class="form-group">
-            {% csrf_token %}
+    <div id="main-container" class="container-fluid">
+        <div id="title-container" class="container-fluid">
+            <h1>INPLOYMENT</h1>
+            <p>We connect people who need work but can't find it to companies
+            who want to help but aren't sure how.</p>
+        </div>
+
+        <!--<form method="POST" class="form-group">
+            {#csrf_token #}
             <input class="form-control" name="curious_email" id="curious-email" placeholder="Your email address"/>
-        </form>
+        </form> -->
+
+        <div class="row">
+            <div class="col-sm-4 email-box" >
+                <div class="colour-container" id="business-box">
+                    <p class="user-title-pre">I am a</p>
+                    <h2 class="user-title">Business</h2>
+                    <p class="user-title-post">with a paid internship to offer</p>
+                    <p class="blurb">blah blah blah yeah yeah jobs blah yes.</p>
+                    <input class="form-control" name="curious_email" id="curious-email" placeholder="Your email address"/>
+                </div>
+            </div>
+            <div class="col-sm-4 email-box" >
+                <div class="colour-container" id="candidate-box">
+                    <p class="user-title-pre">I am a</p>
+                    <h2 class="user-title">Candidate</h2>
+                    <p class="user-title-post">or I represent someone who is</p->
+                    <p class="blurb">Blah blah bandidate blah</p>
+                    <input class="form-control" name="curious_email" id="curious-email" placeholder="Your email address"/>
+                </div>
+            </div>
+            <div class="col-sm-4 email-box" >
+                <div class="colour-container" id="interested-box">
+                    <p class="user-title-pre">I am just</p>
+                    <h2 class="user-title">Interested</h2>
+                    <p class="user-title-post">and want to know more</p>
+                    <p class="blurb">Think you can help in another way, or interested to find out more about what we're doing? You can sign up here to be kept updated, or drop us a line.</p>
+                    <input class="form-control" name="curious_email" id="curious-email" placeholder="Your email address"/>
+                </div>
+            </div>
+        </div>
+
+    <h2>Who we are</h2>
+    <p>Cantor and ball are a bunch of right mavericks and that is for certain.</p>
+
+    <h2>Contact us</h2>
+    <p>contact details, Twitter handle, telephone number go here</p>
     </div>
 
 {% endblock %}

@@ -1,13 +1,55 @@
-body{
+
+body {
     font-family: 'Open Sans',sans-serif;
-    background-color: #761c19;
 }
 
-#main-form{
-    padding:30px;
-    margin:50px auto;
-    width: 300px;
+#main-container {
+    margin:30px auto;
     text-align: center;
-    background-color: #3c3c3c;
-    color: white;
 }
+
+/* Title section */
+
+#title-container{
+    margin-bottom:60px;
+}
+
+
+/* Email boxes */
+.user-title{
+    margin: 0;
+}
+
+.user-title-pre{
+    margin-bottom: 0;
+}
+
+.user-title-post{
+    margin-top: 0.25em;
+    height: 2em;
+}
+
+.colour-container{
+    padding: 30px
+}
+
+.blurb{
+    height: 12em;
+}
+
+#business-box{
+    background-color: #2b669a;
+}
+
+#candidate-box{
+    background-color: #2b542c;
+}
+
+#interested-box{
+    background-color: #a13c05;
+}
+
+.email-box {
+    color: #ffffff;
+}
+
