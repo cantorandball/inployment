@@ -5,7 +5,7 @@ inployment-db:
     - POSTGRES_USER=inployer
 inployment-web:
   build: .
-  command: python manage.py runserver 0.0.0.0:8000
+  command: bash start.sh
   volumes:
     - .:/code
   ports:
