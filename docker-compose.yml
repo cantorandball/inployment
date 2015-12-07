@@ -4,8 +4,8 @@ inployment-db:
     - POSTGRES_PASSWORD=WangBankleCrimThing78GRAH
     - POSTGRES_USER=inployer
 inployment-web:
-  build: .
-  command: python manage.py runserver 0.0.0.0:8000
+  build: ./inployment-django
+  command: python inployment-django/manage.py runserver 0.0.0.0:8000
   volumes:
     - .:/code
   ports:
