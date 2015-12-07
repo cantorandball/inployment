@@ -13,6 +13,7 @@ inployment-web:
      - "8000:8000"
   links:
      - inployment-db
+  command: /usr/local/bin/gunicorn inployment.wsgi:application -w 2 -b :8000
 
 inployment-nginx:
   restart: always
