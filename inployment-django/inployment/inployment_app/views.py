@@ -8,8 +8,10 @@ def index(request):
     # Save email
     if request.method == 'POST':
         if 'business' in request.POST:
+            business_name = request.POST['business_name']
             business_email = request.POST['business_email']
-            Business.objects.create(email_address=business_email)
+            Business.objects.create(name=business_name,
+                                    email_address=business_email)
         elif 'candidate' in request.POST:
             candidate_email = request.POST['candidate_email']
             Candidate.objects.create(email_address=candidate_email)
