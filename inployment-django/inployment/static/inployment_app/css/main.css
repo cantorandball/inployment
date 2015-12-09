@@ -49,6 +49,10 @@ h1{
     background-color: #2b669a;
 }
 
+#business-box .blurb{
+    height:7.45em;
+}
+
 #candidate-box{
     background-color: #2b542c;
 }
