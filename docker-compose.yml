@@ -3,12 +3,25 @@ inployment-db:
   environment:
     - POSTGRES_PASSWORD=WangBankleCrimThing78GRAH
     - POSTGRES_USER=inployer
+
 inployment-web:
-  build: .
-  command: bash start.sh
+  build: ./inployment-django
   volumes:
-    - .:/code
+    - ./inployment-django:/code
   ports:
      - "8000:8000"
   links:
      - inployment-db
+  command: /usr/local/bin/gunicorn inployment.wsgi:application -w 2 -b :8000
+
+inployment-nginx:
+  restart: always
+  build: ./inployment-nginx
+  ports:
+    - "80:80"
+  volumes:
+    - /www/static
+  volumes_from:
+    - inployment-web
+  links:
+    - inployment-web
