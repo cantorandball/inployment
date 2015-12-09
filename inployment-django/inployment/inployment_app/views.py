@@ -19,7 +19,7 @@ def index(request):
             interested_email = request.POST['interested_email']
             InterestedParty.objects.create(email_address=interested_email)
 
-        out = redirect('/inployment/thanks/')
+        out = redirect('thanks/')
     else:
         out = render(request, 'home.html')
     return out
