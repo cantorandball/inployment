@@ -19,8 +19,25 @@
 
 </head>
 <body>
-    {% block content %}
-    {% endblock %}
+
+    <div id="main-container" class="container-fluid">
+        <div id="title-container" class="container-fluid">
+            <h1>INPLOYMENT</h1>
+            <p>We connect people who need work but can't find it to companies
+                who want to help but aren't sure how.</p>
+        </div>
+
+        {% block content %}
+        {% endblock %}
+
+
+        <h2>Who we are</h2>
+        <p>Cantor and ball are a bunch of right mavericks and that is for certain.</p>
+
+        <h2>Contact us</h2>
+        <p>contact details, Twitter handle, telephone number go here</p>
+
+    </div>
     <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 </body>
 </html>
