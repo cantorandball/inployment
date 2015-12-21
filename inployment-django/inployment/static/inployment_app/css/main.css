@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Open Sans', sans-serif
 }
@@ -9,6 +8,14 @@ h1,h2{
 
 h1{
     font-size: 6em;
+}
+
+/* Overwrite bootstrap col behaviour */
+.col-sm-4{
+    padding-left: 0;
+    padding-right: 0;
+    border-right: 15px solid;
+    border-left: 15px solid;
 }
 
 #main-container {
@@ -64,6 +71,18 @@ h1{
 .email-box {
     color: #ffffff;
 }
+
+/* Underboxes */
+.underbox{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #3c3c3c;
+}
+
+#business-underbox{}
+
 
 /* Thank you */
 #thanks-box {
