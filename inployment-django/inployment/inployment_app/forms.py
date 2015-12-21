@@ -15,7 +15,17 @@ class BusinessForm(forms.Form):
     )
 
 class CandidateForm(forms.Form):
-    candidate_email = forms.EmailField(required=True)
+    candidate_email = forms.EmailField(
+        required=True,
+        label='',
+        widget=forms.TextInput(attrs={'placeholder': 'Email address',
+                                      'class': 'form-control'})
+    )
 
 class InterestedForm(forms.Form):
-    interested_email = forms.EmailField(required=True)
+    interested_email = forms.EmailField(
+        required=True,
+        label='',
+        widget=forms.TextInput(attrs={'placeholder': 'Email address',
+                                      'class': 'form-control'})
+    )
