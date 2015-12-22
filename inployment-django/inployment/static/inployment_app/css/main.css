@@ -44,19 +44,17 @@ h1{
     height: 2em;
 }
 
-.colour-container{
+.blinds{
+    height: 100%
 }
 
-.blurb{
-    height: 12em;
+.colour-container{
+    padding: 30px;
+    height: 100%
 }
 
 #business-box{
     background-color: #2b669a;
-}
-
-#business-box .blurb{
-    height:7.45em;
 }
 
 #candidate-box{
@@ -69,7 +67,7 @@ h1{
 
 .email-box {
     color: #ffffff;
-    height: 30em;
+    height: 18em;
 }
 
 /* Underboxes */
@@ -79,6 +77,7 @@ h1{
     height: 100%;
     z-index: -1;
     background-color: #3c3c3c;
+    padding: 30px;
 }
 
 #business-underbox{}
