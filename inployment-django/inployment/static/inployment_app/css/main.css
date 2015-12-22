@@ -45,7 +45,6 @@ h1{
 }
 
 .colour-container{
-    padding: 30px
 }
 
 .blurb{
@@ -70,6 +69,7 @@ h1{
 
 .email-box {
     color: #ffffff;
+    height: 30em;
 }
 
 /* Underboxes */
