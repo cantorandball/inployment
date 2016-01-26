@@ -5,12 +5,12 @@ inployment-db:
     - POSTGRES_USER=inployer
 
 inployment-web:
+  dns: 8.8.8.8
   build: ./inployment-django
   volumes:
     - ./inployment-django:/code
   ports:
      - "8000:8000"
-  dns: 8.8.8.8
   links:
      - inployment-db
   command: /usr/local/bin/gunicorn inployment.wsgi:application -w 2 -b :8000

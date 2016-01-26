@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from models import *
-from forms import *
+from .models import *
+from .forms import *
 
 # Test view from Django tutorial: https://docs.djangoproject.com/en/1.9/intro/tutorial01/
 
