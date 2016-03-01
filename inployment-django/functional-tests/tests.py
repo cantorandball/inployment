@@ -15,6 +15,8 @@ class FunctionalTest(StaticLiveServerTestCase):
     def tearDown(self):
         self.browser.quit()
 
-    def test_true(self):
-        self.assertEquals(True, True)
+    def test_title_exists(self):
+        self.browser.get("localhost:8000")
 
+        # Check Inployment in the title
+        self.assertIn("Inployment", self.browser.title)
