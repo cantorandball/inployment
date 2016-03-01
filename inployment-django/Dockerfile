@@ -1,7 +1,13 @@
-FROM python:2.7
-ENV PYTHONUNBUFFERED 1
+FROM ubuntu:14.04
+
+ENV PYTHONUNBUFFERED=1 DISPLAY=:99
 RUN mkdir /code
 WORKDIR /code
 ADD requirements.txt /code/
-RUN pip install -r /code/requirements.txt
+
+RUN apt-get update && apt-get install -y libpq-dev python-dev python3-pip xvfb firefox
+RUN pip3 install --upgrade pip
+RUN pip3 install -r /code/requirements.txt
 ADD . /code/
+
+RUN Xvfb :99 -ac &

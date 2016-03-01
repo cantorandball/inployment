@@ -5,6 +5,7 @@ inployment-db:
     - POSTGRES_USER=inployer
 
 inployment-web:
+  dns: 8.8.8.8
   build: ./inployment-django
   volumes:
     - ./inployment-django:/code

@@ -10,6 +10,14 @@ h1{
     font-size: 6em;
 }
 
+a{
+    color:  #000
+}
+
+a:hover{
+    text-decoration: none;
+}
+
 /* Overwrite bootstrap col behaviour */
 .col-sm-4{
     padding-left: 0;
