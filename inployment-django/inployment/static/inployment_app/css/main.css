@@ -82,6 +82,10 @@ a:hover{
     height: 18em;
 }
 
+.blurb{
+    height: 88px
+}
+
 /* Underboxes */
 .underbox{
     width: 100%;
@@ -106,3 +110,10 @@ button {
     margin-top: 1em;
 }
 
+/* SVG styling */
+
+.arrow {
+    stroke: #FFF;
+    fill: #FFF;
+    stroke-width: 0px;
+}
