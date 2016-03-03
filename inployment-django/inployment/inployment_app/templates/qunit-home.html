@@ -1,8 +1,19 @@
 {% extends 'home.html' %}
 {% load staticfiles %}
+
+
+{% block tests %}
+
     <link rel="stylesheet" href="{% static 'inployment_app/css/qunit.css' %}">
     <script src="{% static 'inployment_app/js/qunit.js' %}"></script>
 
-{% block tests %}
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+
+    <script>
+        $(test("Smoke test", function(assert){
+            assert.ok(true);
+        }));
+    </script>
 
 {% endblock %}
