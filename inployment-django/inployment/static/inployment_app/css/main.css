@@ -106,3 +106,10 @@ button {
     margin-top: 1em;
 }
 
+/* SVG styling */
+
+.arrow {
+    stroke: #FFF;
+    fill: #FFF;
+    stroke-width: 0px;
+}

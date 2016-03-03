@@ -34,12 +34,21 @@ class FunctionalTest(StaticLiveServerTestCase):
             "//label[@for='" + input_id + "']"
         )
 
+        # He notices, though, that there's a little arrow on each of the three
+        # boxes
+        arrow_class = '.arrow'
+        arrows = self.browser.find_elements_by_css_selector(arrow_class)
+        self.assertEqual(3, len(arrows),
+                         msg="Not enough arrows visible on the screen")
+
         #He can't see a thanks box, cause he's not there yet.
         thanks_id = "thanks-box"
         with self.assertRaises(
                 selenium.common.exceptions.NoSuchElementException
         ):
             self.browser.find_element_by_id(thanks_id)
+
+
 
         # He types his email in, and is shown a thanks box
         self.assertEquals("Email address:", input_label.text)
