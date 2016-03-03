@@ -82,6 +82,10 @@ a:hover{
     height: 18em;
 }
 
+.blurb{
+    height: 88px
+}
+
 /* Underboxes */
 .underbox{
     width: 100%;
