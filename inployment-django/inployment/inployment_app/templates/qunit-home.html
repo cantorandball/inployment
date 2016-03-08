@@ -1,17 +1,17 @@
 {% extends 'home.html' %}
 {% load staticfiles %}
 
+{% block open-test-fixture %}
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+{% endblock %}
 
 {% block tests %}
-
     <link rel="stylesheet" href="{% static 'inployment_app/css/qunit.css' %}">
     <script src="{% static 'inployment_app/js/qunit.js' %}"></script>
 
-    <div id="qunit"></div>
-    <div id="qunit-fixture"></div>
-
     <script>
-        $(test("All underboxes appear and hide on chevron click",
+        $(QUnit.test("All underboxes appear and hide on chevron click",
             function(assert){
 
                 // Check boxes are hidden
@@ -44,11 +44,6 @@
                     // Async stuff over
                     start();
                 });
-
         }));
-
-
-
     </script>
-
 {% endblock %}
