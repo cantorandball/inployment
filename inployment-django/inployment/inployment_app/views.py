@@ -41,3 +41,6 @@ def index(request):
 
 def thanks(request):
     return render(request, 'thanks.html')
+
+def tests(request):
+    return render(request, 'qunit-home.html')

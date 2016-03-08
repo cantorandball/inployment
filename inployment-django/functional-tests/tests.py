@@ -64,4 +64,11 @@ class FunctionalTest(StaticLiveServerTestCase):
             self.browser.find_element_by_id(thanks_id)
 
 
+#    After JQuery tests
+#    def test_business_rejects_wrong_email(self):
+#        input_id = "id_business_email"
+#        input_box = self.browser.find_element_by_id(input_id)
+#        input_box.send_keys("badval")
+#        input_box.send_keys(Keys.ENTER)
+
 

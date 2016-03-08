@@ -22,9 +22,11 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'inployment_app/img/favicon.ico' %}"/>
 
-
 </head>
 <body>
+
+    {% block open-test-fixture %}
+    {% endblock %}
 
     <div id="main-container" class="container-fluid">
         <div id="title-container" class="container-fluid">
@@ -46,5 +48,7 @@
 
     </div>
     <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    {% block tests %}
+    {% endblock %}
 </body>
 </html>

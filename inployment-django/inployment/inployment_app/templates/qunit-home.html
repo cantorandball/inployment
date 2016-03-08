@@ -1,0 +1,49 @@
+{% extends 'home.html' %}
+{% load staticfiles %}
+
+{% block open-test-fixture %}
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+{% endblock %}
+
+{% block tests %}
+    <link rel="stylesheet" href="{% static 'inployment_app/css/qunit.css' %}">
+    <script src="{% static 'inployment_app/js/qunit.js' %}"></script>
+
+    <script>
+        $(QUnit.test("All underboxes appear and hide on chevron click",
+            function(assert){
+
+                // Check boxes are hidden
+                $(".underbox").each(function(){
+                   assert.notOk($(this).is( ":visible" ));
+                });
+
+                // Click the chevrons, check underboxes appear, and hide again
+                // when underbox is clicked.
+                $(".arrow").each(function(){
+                    $(this).click();
+                });
+                $(".underbox").each(function(){
+                    assert.ok($(this).is( ":visible" ));
+
+                    // Stop the tests as we're going to do some asynchronous
+                    // waiting stuff
+                    stop();
+
+                    // Wait for blinds to finish, and close them
+                    $(this).parent(".blinds").promise().done(function(){
+                        $(this).click();
+                        // Wait for them to finish *closing*, then check the
+                        // underbox is invisible
+                        $(this).parent(".blinds").promise().done(function(){
+                            assert.notOk($(this).is( ":visible" ));
+                        });
+                    });
+
+                    // Async stuff over
+                    start();
+                });
+            }));
+    </script>
+{% endblock %}
