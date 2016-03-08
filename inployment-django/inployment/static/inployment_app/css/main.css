@@ -79,11 +79,11 @@ a:hover{
 
 .email-box {
     color: #ffffff;
-    height: 18em;
+    height: 22em;
 }
 
 .blurb{
-    height: 88px
+    height: 10em
 }
 
 /* Underboxes */
@@ -105,9 +105,14 @@ a:hover{
 }
 
 /* Forms */
+
 button {
     width: 100%;
     margin-top: 1em;
+}
+
+input {
+    margin-bottom: 1em;
 }
 
 /* SVG styling */
@@ -116,4 +121,12 @@ button {
     stroke: #FFF;
     fill: #FFF;
     stroke-width: 0px;
+}
+
+/* Errors */
+ul.errorlist {
+    list-style-type: none;
+    text-align: center;
+    color: red;
+    padding: 0;
 }
