@@ -11,11 +11,44 @@
     <div id="qunit-fixture"></div>
 
     <script>
-        $(test("All underboxes are hidden", function(assert){
-            $(".underbox").each(function(){
-               assert.notOk($(this).is( ":visible" ));
-            });
+        $(test("All underboxes are hidden and appear on chevron click",
+            function(assert){
+
+                // Check boxes are hidden
+                $(".underbox").each(function(){
+                   assert.notOk($(this).is( ":visible" ));
+                });
+
+                // Click the chevrons, check underboxes appear, and hide again
+                // when underbox is clicked.
+                $(".arrow").each(function(){
+                    $(this).click();
+                });
+                $(".underbox").each(function(){
+                    assert.ok($(this).is( ":visible" ));
+
+                    // Stop the tests as we're going to do some asynchronous
+                    // waiting stuff
+                    stop();
+
+                    // Wait for blinds to finish, and close them
+                    $(this).parent(".blinds").promise().done(function(){
+                        $(this).click();
+                        // Wait for them to finish *closing*, then check the
+                        // underbox is invisible
+                        $(this).parent(".blinds").promise().done(function(){
+                            assert.notOk($(this).is( ":visible" ));
+                        });
+                    });
+
+                    // Async stuff over
+                    start();
+                });
+
         }));
+
+
+
     </script>
 
 {% endblock %}
