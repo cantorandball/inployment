@@ -11,8 +11,10 @@
     <div id="qunit-fixture"></div>
 
     <script>
-        $(test("Smoke test", function(assert){
-            assert.ok(true);
+        $(test("All underboxes are hidden", function(assert){
+            $(".underbox").each(function(){
+               assert.notOk($(this).is( ":visible" ));
+            });
         }));
     </script>
 
